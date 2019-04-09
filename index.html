@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <!--JQuery Link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--Javascript Link-->
+    <script src="assets/Javascript/app.js"></script>
+
+    <title>Trivia Game</title>
+
+</head>
+
+<body>
+
+    <h1>Travel Trivia</h1>
+
+
+        <button class = "startButton">Start Game!</button>
+
+    <div id = "timer">Time: </div>
+
+    <div id = "triviaBody">
+
+            <form id="Q1">
+                    <p class = "questions">What country is the largest by landmass?</p>
+                    <input type="radio" name="answer" class="answerOptions">Canada
+                    <input type="radio" name="answer" class="answerOptions" id="correct">Russia
+                    <input type="radio" name="answer" class="answerOptions">China  
+                    <input type="radio" name="answer" class="answerOptions">Zimbabwe  
+            </form> 
+
+            <form id="Q2">
+                    <p class = "questions">Which country has won the most Olympic gold medals?</p>
+                    <input type="radio" name="answer" class="answerOptions">Germany
+                    <input type="radio" name="answer" class="answerOptions">Switzerland
+                    <input type="radio" name="answer" class="answerOptions" id="correct">USA 
+                    <input type="radio" name="answer" class="answerOptions">Japan  
+            </form> 
+
+            <form id="Q3">
+                    <p class = "questions">Which of the following countries is NOT an example of an enclave?</p>
+                    <input type="radio" name="answer" class="answerOptions">Vatican City
+                    <input type="radio" name="answer" class="answerOptions">Lesotho
+                    <input type="radio" name="answer" class="answerOptions" id="correct">Madagascar
+                    <input type="radio" name="answer" class="answerOptions">San Merino  
+            </form> 
+
+            <form id="Q4">
+                    <p class = "questions">Club America, Cruz Azul, and Club Leon are teams in what country's soccer league?</p>
+                    <input type="radio" name="answer" class="answerOptions" id="correct">Mexico
+                    <input type="radio" name="answer" class="answerOptions">Honduras
+                    <input type="radio" name="answer" class="answerOptions">Chile
+                    <input type="radio" name="answer" class="answerOptions">Italy  
+            </form> 
+
+            <form id="Q5">
+                    <p class = "questions">What is the capital of Australia?</p>
+                    <input type="radio" name="answer" class="answerOptions">Sydney
+                    <input type="radio" name="answer" class="answerOptions" id="correct">Canberra
+                    <input type="radio" name="answer" class="answerOptions">Adelaide
+                    <input type="radio" name="answer" class="answerOptions">Melbourne  
+            </form>
+  
+            <form id="Q6">
+                    <p class = "questions">What is the smallest country in Central America?</p>
+                    <input type="radio" name="answer" class="answerOptions" id="correct">El Salvador
+                    <input type="radio" name="answer" class="answerOptions">Costa Rica
+                    <input type="radio" name="answer" class="answerOptions">Belize
+                    <input type="radio" name="answer" class="answerOptions">Nicaragua  
+            </form>
+
+            <form id="Q7">
+                    <p class = "questions">Which is NOT an official language of Belgium?</p>
+                    <input type="radio" name="answer" class="answerOptions">French
+                    <input type="radio" name="answer" class="answerOptions">Dutch
+                    <input type="radio" name="answer" class="answerOptions">German
+                    <input type="radio" name="answer" class="answerOptions" id="correct">English
+            </form>
+
+            <form id="Q8">
+                    <p class = "questions">What is the youngest country in the world?</p>
+                    <input type="radio" name="answer" class="answerOptions">Serbia
+                    <input type="radio" name="answer" class="answerOptions" id="correct">South Sudan
+                    <input type="radio" name="answer" class="answerOptions">Eritrea
+                    <input type="radio" name="answer" class="answerOptions">Czech Republic  
+            </form>
+
+    </div>
+
+        <button class = "doneButton">Done!</button>
+
+
+    <div id = "triviaBody2">
+
+        <h2>All Done!</h1>
+        <p class = "correctAnswers">Correct: </p>
+        <p class = "incorrectAnswers">Incorrect: </p>
+        <p class = "unanswered">Unanswered: </p>
+
+    </div>
+
+</body>
+
+</html>

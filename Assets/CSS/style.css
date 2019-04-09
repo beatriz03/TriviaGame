@@ -1,0 +1,69 @@
+body {
+    background: url("../images/worldBackground.jpg");
+  }
+
+h1 {
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(blue, yellow);
+    color: white;
+    font-size: 450%;
+    width: 40%;
+    border-radius: 15px;
+}
+
+.startButton, .doneButton {
+    margin-left: 37%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background-color:yellow;
+    color: white;
+    border: 6px solid rgb(61, 61, 216);
+    border-radius: 20px;
+    font-size: 300%;
+    padding: 16px 32px;
+}
+
+.doneButton {
+    display: none;
+    margin-left: 43%;
+}
+
+.startButton:hover, .doneButton:hover {
+    background-color: rgb(147, 151, 199);
+    color: white;
+}
+
+
+#triviaBody, #triviaBody2 {
+    display: none;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color:white;
+    background: linear-gradient(blue, rgb(231, 231, 7));
+    width: 80%;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+#triviaBody2 {
+    width: 50%;
+    font-size: 180%;
+}
+
+#timer {
+    position:fixed;
+    font-size: 290%;
+    background-color:yellow;
+    color: white;
+    border: 6px solid rgb(61, 61, 216);
+    border-radius: 15px;
+    padding: 6px;
+}
+
+.questions {
+    color: white;
+    font-size: 190%;
+}
