@@ -4,19 +4,29 @@ $(document).ready(function(){
         $("#triviaBody").toggle();
         $("#triviaBody2").hide();
         $(".doneButton").toggle();
+
+        $(".doneButton").click(function(){
+            $("#triviaBody2").show();
+            $("#triviaBody").toggle();
+            $(".doneButton").toggle();
+            $(".startButton").toggle();
+            $("#timer").toggle();
     });
+});
 
 // start & stop buttons
     $(".startButton").on("click", start);
-
     $(".doneButton").on("click", stop);
-    $("#triviaBody2").toggle();
   });
+
 
 
 var IntervalId;
 var clockRunning = false;
-var time = 10;
+var time = 3;
+
+correctAnswersText.textContent = "Correct Answers: " + correctAnswers;
+incorrectAnswersText.textContent = "Incorrect Answers: " + incorrectAnswers;
 
 function start() {
     if (!clockRunning) {
@@ -31,7 +41,7 @@ function stop() {
   }
 
 function count() {
-    time--;
+    time--
 
 var converted = timeConverter(time);
     console.log(converted);
@@ -39,19 +49,16 @@ var converted = timeConverter(time);
     $("#timer").text(converted);
 }
 
-// Stop timer automatically at 00:00 and show screen with results
-if (time == 0) {
-    clearInterval(x);
-    document.getElementById("#triviaBody2").innerHTML = "";
-  };
 
 
-//Logic for the trivia answers and scores:
-if (condition) {
-    correctAnswers++
-  } else { 
-    incorrectAnswers++
-  }
+
+
+// Logic for the trivia answers and scores:
+// if ("#correct").onclick(); {
+//     correctAnswers++
+//   } else { 
+//     incorrectAnswers++
+//   }
 
 
 
