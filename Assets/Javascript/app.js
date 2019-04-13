@@ -5,6 +5,8 @@ $(document).ready(function(){
         $("#triviaBody2").hide();
         $(".doneButton").toggle();
 
+
+//When user clicks "done" previous items hide
         $(".doneButton").click(function(){
             $("#triviaBody2").show();
             $("#triviaBody").toggle();
@@ -21,12 +23,10 @@ $(document).ready(function(){
 
 
 
+//Clock Function
 var IntervalId;
 var clockRunning = false;
-var time = 3;
-
-correctAnswersText.textContent = "Correct Answers: " + correctAnswers;
-incorrectAnswersText.textContent = "Incorrect Answers: " + incorrectAnswers;
+var time = 30;
 
 function start() {
     if (!clockRunning) {
@@ -40,31 +40,21 @@ function stop() {
     clockRunning = false;
   }
 
-function count() {
-    time--
 
-var converted = timeConverter(time);
+//Stops clock at 0
+function count() {
+  if (time > 0 ){
+    time--
+    var converted = timeConverter(time);
     console.log(converted);
 
     $("#timer").text(converted);
+
+  } else {
+    stop()
+  }
 }
-
-
-
-
-
-// Logic for the trivia answers and scores:
-// if ("#correct").onclick(); {
-//     correctAnswers++
-//   } else { 
-//     incorrectAnswers++
-//   }
-
-
-
-
-
-
+  
 
 //Time Converter
 function timeConverter(t) {
@@ -87,3 +77,22 @@ function timeConverter(t) {
 }
 
 
+
+
+//right & wrong answers & scoring
+var correctAnswers = 0;
+    incorrectAnswers = 0;
+    unanswered = 0;
+
+
+    $("#correctAnswers").text("Correct Answers: " + correctAnswers);
+    $("#incorrectAnswers").text("Incorrect Answers: " + incorrectAnswers);
+    $("#unansweredText").text("Unanswered: " + unanswered);
+    
+    
+    var answers = $("#correct").val();
+    if (answers) {
+      correctAnswers++
+    } else {
+      incorrectAnswers++
+    }
