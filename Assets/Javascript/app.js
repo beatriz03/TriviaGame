@@ -1,49 +1,49 @@
 // When user clicks "start" the questions will appear & timer will begin.
-$(document).ready(function(){
-    $(".startButton").click(function(){
-        $("#triviaBody").toggle();
-        $("#triviaBody2").hide();
-        $(".doneButton").toggle();
+$(document).ready(function () {
+  $(".startButton").click(function () {
+    $("#triviaBody").toggle();
+    $("#triviaBody2").hide();
+    $(".doneButton").toggle();
 
 
-//When user clicks "done" previous items hide
-        $(".doneButton").click(function(){
-            $("#triviaBody2").show();
-            $("#triviaBody").toggle();
-            $(".doneButton").toggle();
-            $(".startButton").toggle();
-            $("#timer").toggle();
+    //When user clicks "done" previous items hide
+    $(".doneButton").click(function () {
+      $("#triviaBody2").show();
+      $("#triviaBody").toggle();
+      $(".doneButton").toggle();
+      $(".startButton").toggle();
+      $("#timer").toggle();
     });
-});
-
-// start & stop buttons
-    $(".startButton").on("click", start);
-    $(".doneButton").on("click", stop);
   });
+
+  // start & stop buttons
+  $(".startButton").on("click", start);
+  $(".doneButton").on("click", stop);
+});
 
 
 
 //Clock Function
 var IntervalId;
 var clockRunning = false;
-var time = 30;
+var time = 60;
 
 function start() {
-    if (!clockRunning) {
-        intervalId = setInterval(count, 1000);
-        clockRunning = true;
-      }
-    }
+  if (!clockRunning) {
+    intervalId = setInterval(count, 1000);
+    clockRunning = true;
+  }
+}
 
 function stop() {
-    clearInterval(intervalId);
-    clockRunning = false;
-  }
+  clearInterval(intervalId);
+  clockRunning = false;
+}
 
 
-//Stops clock at 0
+//When timer hits 0 stop running & show score
 function count() {
-  if (time > 0 ){
+  if (time > 0) {
     time--
     var converted = timeConverter(time);
     console.log(converted);
@@ -52,6 +52,12 @@ function count() {
 
   } else {
     stop()
+    $("#triviaBody2").show();
+    $("#triviaBody").hide();
+    $(".doneButton").hide();
+    $(".startButton").hide();
+    $("#timer").hide();
+
   }
 }
   
@@ -79,20 +85,27 @@ function timeConverter(t) {
 
 
 
-//right & wrong answers & scoring
+//right & wrong answers & scoring display
 var correctAnswers = 0;
     incorrectAnswers = 0;
     unanswered = 0;
 
+$("#right").click(function () {
+  correctAnswers++
+});
 
-    $("#correctAnswers").text("Correct Answers: " + correctAnswers);
-    $("#incorrectAnswers").text("Incorrect Answers: " + incorrectAnswers);
-    $("#unansweredText").text("Unanswered: " + unanswered);
-    
-    
-    var answers = $("#correct").val();
-    if (answers) {
-      correctAnswers++
-    } else {
-      incorrectAnswers++
-    }
+$("#wrong").click(function () {
+  incorrectAnswers++
+});
+
+$("#correctAnswers").text("Correct Answers: " + correctAnswers);
+$("#incorrectAnswers").text("Incorrect Answers: " + incorrectAnswers);
+$("#unanswered").text("Unanswered: " + unanswered);
+
+
+
+
+    // unanswered logic
+    // if (!=){
+    //   unanswered++
+    // }
