@@ -2,7 +2,7 @@ body {
     background: url("../images/worldBackground.jpg");
   }
 
-h1 {
+#title {
     margin: auto;
     text-align: center;
     background: linear-gradient(blue, yellow);
@@ -12,8 +12,19 @@ h1 {
     border-radius: 15px;
 }
 
-.startButton, .doneButton {
-    margin-left: 37%;
+#subwrapper {
+    margin: auto;
+    margin-top: 5%;
+    padding-top: 20px;
+    text-align: center;
+    color:white;
+    background: linear-gradient(blue, rgb(231, 231, 7));
+    width: 80%;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+#startButton, #resetButton {
     margin-top: 3%;
     margin-bottom: 3%;
     background-color:yellow;
@@ -24,47 +35,24 @@ h1 {
     padding: 16px 32px;
 }
 
-.doneButton {
+#resetButton {
     display: none;
     margin-left: 43%;
 }
 
-.startButton:hover, .doneButton:hover {
+#startButton:hover, #resetButton:hover {
     background-color: rgb(147, 151, 199);
     color: white;
 }
 
 
-#triviaBody, #triviaBody2 {
-    display: none;
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    color:white;
-    background: linear-gradient(blue, rgb(231, 231, 7));
-    width: 80%;
-    border-radius: 15px;
-    opacity: 0.9;
-}
-
-#triviaBody2 {
-    margin-top: 30px;
-    width: 50%;
-    font-size: 180%;
-}
-
-#timer {
+#counter {
     position:fixed;
     font-size: 290%;
     background-color:yellow;
     color: white;
     border: 6px solid rgb(61, 61, 216);
     border-radius: 15px;
-    padding: 6px;
+    padding: 30px;
 }
 
-.questions {
-    color: white;
-    font-size: 190%;
-}
